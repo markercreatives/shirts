@@ -7,20 +7,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>T-Shirt Customizer</h1>
+    <h1>Design Yours!</h1>
+    
     <div id="tshirt-container">
         <div id="tshirt"></div>
     </div>
 
     <div class="controls">
-        <button onclick="changeColor('#cccccc')">Gray</button>
-        <button onclick="changeColor('#ffffff')">White</button>
-        <button onclick="changeColor('#000000')">Black</button>
-        <button onclick="changeColor('#ff0000')">Red</button>
-        <input type="text" id="textInput" placeholder="Enter text">
+        <h3>Text on the Shirt</h3>
+        <input type="text" id="textInput" placeholder="Enter your text">
         <button onclick="addText()">Add Text</button>
+    </div>
+
+    <div class="controls">
+        <h3>Choose Your Color</h3>
+        <div class="color-options">
+            <button class="color-btn" style="background-color: white;" onclick="changeColor('#ffffff')"></button>
+            <button class="color-btn" style="background-color: red;" onclick="changeColor('#ff0000')"></button>
+            <button class="color-btn" style="background-color: blue;" onclick="changeColor('#0000ff')"></button>
+            <button class="color-btn" style="background-color: green;" onclick="changeColor('#00ff00')"></button>
+            <button class="color-btn" style="background-color: pink;" onclick="changeColor('#ff69b4')"></button>
+        </div>
+    </div>
+
+    <div class="controls upload-area">
+        <h3>Upload Your Image</h3>
         <input type="file" id="imageUpload" accept="image/*" onchange="addImage(event)">
     </div>
+
+    <button class="ready-btn">Ready!</button>
 
     <script src="script.js"></script>
 </body>
